@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E657F8E51527154E00C1AB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8E41527154E00C1AB9B /* UIKit.framework */; };
+		E657F8E71527154E00C1AB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8E61527154E00C1AB9B /* Foundation.framework */; };
+		E657F8E91527154E00C1AB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8E81527154E00C1AB9B /* CoreGraphics.framework */; };
+		E657F8EB1527154E00C1AB9B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8EA1527154E00C1AB9B /* CoreData.framework */; };
+		E657F8F11527154E00C1AB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E657F8EF1527154E00C1AB9B /* InfoPlist.strings */; };
+		E657F8F31527154E00C1AB9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F8F21527154E00C1AB9B /* main.m */; };
+		E657F8F71527154E00C1AB9B /* FeedroidAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F8F61527154E00C1AB9B /* FeedroidAppDelegate.m */; };
+		E657F8FA1527154E00C1AB9B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E657F8F81527154E00C1AB9B /* MainStoryboard.storyboard */; };
+		E657F8FD1527154E00C1AB9B /* Feedroid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E657F8FB1527154E00C1AB9B /* Feedroid.xcdatamodeld */; };
+		E657F9001527154E00C1AB9B /* FeedroidMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F8FF1527154E00C1AB9B /* FeedroidMasterViewController.m */; };
+		E657F9031527154E00C1AB9B /* FeedroidDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9021527154E00C1AB9B /* FeedroidDetailViewController.m */; };
+		E657F90B1527154E00C1AB9B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F90A1527154E00C1AB9B /* SenTestingKit.framework */; };
+		E657F90C1527154E00C1AB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8E41527154E00C1AB9B /* UIKit.framework */; };
+		E657F90D1527154E00C1AB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8E61527154E00C1AB9B /* Foundation.framework */; };
+		E657F90E1527154E00C1AB9B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8EA1527154E00C1AB9B /* CoreData.framework */; };
+		E657F9161527154E00C1AB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E657F9141527154E00C1AB9B /* InfoPlist.strings */; };
+		E657F9191527154E00C1AB9B /* FeedroidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9181527154E00C1AB9B /* FeedroidTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E657F90F1527154E00C1AB9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E657F8D71527154E00C1AB9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E657F8DF1527154E00C1AB9B;
+			remoteInfo = Feedroid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E657F8E01527154E00C1AB9B /* Feedroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E657F8E41527154E00C1AB9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E657F8E61527154E00C1AB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E657F8E81527154E00C1AB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E657F8EA1527154E00C1AB9B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E657F8EE1527154E00C1AB9B /* Feedroid-Info.plist */ = {isa = PBXFileReference; path = "Feedroid-Info.plist"; sourceTree = "<group>"; };
+		E657F8F01527154E00C1AB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E657F8F21527154E00C1AB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E657F8F41527154E00C1AB9B /* Feedroid-Prefix.pch */ = {isa = PBXFileReference; path = "Feedroid-Prefix.pch"; sourceTree = "<group>"; };
+		E657F8F51527154E00C1AB9B /* FeedroidAppDelegate.h */ = {isa = PBXFileReference; path = FeedroidAppDelegate.h; sourceTree = "<group>"; };
+		E657F8F61527154E00C1AB9B /* FeedroidAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidAppDelegate.m; sourceTree = "<group>"; };
+		E657F8F91527154E00C1AB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E657F8FC1527154E00C1AB9B /* Feedroid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Feedroid.xcdatamodel; sourceTree = "<group>"; };
+		E657F8FE1527154E00C1AB9B /* FeedroidMasterViewController.h */ = {isa = PBXFileReference; path = FeedroidMasterViewController.h; sourceTree = "<group>"; };
+		E657F8FF1527154E00C1AB9B /* FeedroidMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidMasterViewController.m; sourceTree = "<group>"; };
+		E657F9011527154E00C1AB9B /* FeedroidDetailViewController.h */ = {isa = PBXFileReference; path = FeedroidDetailViewController.h; sourceTree = "<group>"; };
+		E657F9021527154E00C1AB9B /* FeedroidDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidDetailViewController.m; sourceTree = "<group>"; };
+		E657F9091527154E00C1AB9B /* FeedroidTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedroidTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E657F90A1527154E00C1AB9B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E657F9131527154E00C1AB9B /* FeedroidTests-Info.plist */ = {isa = PBXFileReference; path = "FeedroidTests-Info.plist"; sourceTree = "<group>"; };
+		E657F9151527154E00C1AB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E657F9171527154E00C1AB9B /* FeedroidTests.h */ = {isa = PBXFileReference; path = FeedroidTests.h; sourceTree = "<group>"; };
+		E657F9181527154E00C1AB9B /* FeedroidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E657F8DD1527154E00C1AB9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657F8E51527154E00C1AB9B /* UIKit.framework in Frameworks */,
+				E657F8E71527154E00C1AB9B /* Foundation.framework in Frameworks */,
+				E657F8E91527154E00C1AB9B /* CoreGraphics.framework in Frameworks */,
+				E657F8EB1527154E00C1AB9B /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E657F9051527154E00C1AB9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657F90B1527154E00C1AB9B /* SenTestingKit.framework in Frameworks */,
+				E657F90C1527154E00C1AB9B /* UIKit.framework in Frameworks */,
+				E657F90D1527154E00C1AB9B /* Foundation.framework in Frameworks */,
+				E657F90E1527154E00C1AB9B /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E657F8D51527154E00C1AB9B = {
+			isa = PBXGroup;
+			children = (
+				E657F8EC1527154E00C1AB9B /* Feedroid */,
+				E657F9111527154E00C1AB9B /* FeedroidTests */,
+				E657F8E31527154E00C1AB9B /* Frameworks */,
+				E657F8E11527154E00C1AB9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E657F8E11527154E00C1AB9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E657F8E01527154E00C1AB9B /* Feedroid.app */,
+				E657F9091527154E00C1AB9B /* FeedroidTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E657F8E31527154E00C1AB9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E657F8E41527154E00C1AB9B /* UIKit.framework */,
+				E657F8E61527154E00C1AB9B /* Foundation.framework */,
+				E657F8E81527154E00C1AB9B /* CoreGraphics.framework */,
+				E657F8EA1527154E00C1AB9B /* CoreData.framework */,
+				E657F90A1527154E00C1AB9B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E657F8EC1527154E00C1AB9B /* Feedroid */ = {
+			isa = PBXGroup;
+			children = (
+				E657F8F51527154E00C1AB9B /* FeedroidAppDelegate.h */,
+				E657F8F61527154E00C1AB9B /* FeedroidAppDelegate.m */,
+				E657F8F81527154E00C1AB9B /* MainStoryboard.storyboard */,
+				E657F8FE1527154E00C1AB9B /* FeedroidMasterViewController.h */,
+				E657F8FF1527154E00C1AB9B /* FeedroidMasterViewController.m */,
+				E657F9011527154E00C1AB9B /* FeedroidDetailViewController.h */,
+				E657F9021527154E00C1AB9B /* FeedroidDetailViewController.m */,
+				E657F8FB1527154E00C1AB9B /* Feedroid.xcdatamodeld */,
+				E657F8ED1527154E00C1AB9B /* Supporting Files */,
+			);
+			path = Feedroid;
+			sourceTree = "<group>";
+		};
+		E657F8ED1527154E00C1AB9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E657F8EE1527154E00C1AB9B /* Feedroid-Info.plist */,
+				E657F8EF1527154E00C1AB9B /* InfoPlist.strings */,
+				E657F8F21527154E00C1AB9B /* main.m */,
+				E657F8F41527154E00C1AB9B /* Feedroid-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E657F9111527154E00C1AB9B /* FeedroidTests */ = {
+			isa = PBXGroup;
+			children = (
+				E657F9171527154E00C1AB9B /* FeedroidTests.h */,
+				E657F9181527154E00C1AB9B /* FeedroidTests.m */,
+				E657F9121527154E00C1AB9B /* Supporting Files */,
+			);
+			path = FeedroidTests;
+			sourceTree = "<group>";
+		};
+		E657F9121527154E00C1AB9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E657F9131527154E00C1AB9B /* FeedroidTests-Info.plist */,
+				E657F9141527154E00C1AB9B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E657F8DF1527154E00C1AB9B /* Feedroid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E657F91C1527154E00C1AB9B /* Build configuration list for PBXNativeTarget "Feedroid" */;
+			buildPhases = (
+				E657F8DC1527154E00C1AB9B /* Sources */,
+				E657F8DD1527154E00C1AB9B /* Frameworks */,
+				E657F8DE1527154E00C1AB9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Feedroid;
+			productName = Feedroid;
+			productReference = E657F8E01527154E00C1AB9B /* Feedroid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E657F9081527154E00C1AB9B /* FeedroidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E657F91F1527154E00C1AB9B /* Build configuration list for PBXNativeTarget "FeedroidTests" */;
+			buildPhases = (
+				E657F9041527154E00C1AB9B /* Sources */,
+				E657F9051527154E00C1AB9B /* Frameworks */,
+				E657F9061527154E00C1AB9B /* Resources */,
+				E657F9071527154E00C1AB9B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E657F9101527154E00C1AB9B /* PBXTargetDependency */,
+			);
+			name = FeedroidTests;
+			productName = FeedroidTests;
+			productReference = E657F9091527154E00C1AB9B /* FeedroidTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E657F8D71527154E00C1AB9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Feedroid;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E657F8DA1527154E00C1AB9B /* Build configuration list for PBXProject "Feedroid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E657F8D51527154E00C1AB9B;
+			productRefGroup = E657F8E11527154E00C1AB9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E657F8DF1527154E00C1AB9B /* Feedroid */,
+				E657F9081527154E00C1AB9B /* FeedroidTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E657F8DE1527154E00C1AB9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657F8F11527154E00C1AB9B /* InfoPlist.strings in Resources */,
+				E657F8FA1527154E00C1AB9B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E657F9061527154E00C1AB9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657F9161527154E00C1AB9B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E657F9071527154E00C1AB9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E657F8DC1527154E00C1AB9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657F8F31527154E00C1AB9B /* main.m in Sources */,
+				E657F8F71527154E00C1AB9B /* FeedroidAppDelegate.m in Sources */,
+				E657F8FD1527154E00C1AB9B /* Feedroid.xcdatamodeld in Sources */,
+				E657F9001527154E00C1AB9B /* FeedroidMasterViewController.m in Sources */,
+				E657F9031527154E00C1AB9B /* FeedroidDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E657F9041527154E00C1AB9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E657F9191527154E00C1AB9B /* FeedroidTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E657F9101527154E00C1AB9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E657F8DF1527154E00C1AB9B /* Feedroid */;
+			targetProxy = E657F90F1527154E00C1AB9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E657F8EF1527154E00C1AB9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E657F8F01527154E00C1AB9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E657F8F81527154E00C1AB9B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E657F8F91527154E00C1AB9B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		E657F9141527154E00C1AB9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E657F9151527154E00C1AB9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E657F91A1527154E00C1AB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E657F91B1527154E00C1AB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E657F91D1527154E00C1AB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Feedroid/Feedroid-Prefix.pch";
+				INFOPLIST_FILE = "Feedroid/Feedroid-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E657F91E1527154E00C1AB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Feedroid/Feedroid-Prefix.pch";
+				INFOPLIST_FILE = "Feedroid/Feedroid-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E657F9201527154E00C1AB9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Feedroid.app/Feedroid";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Feedroid/Feedroid-Prefix.pch";
+				INFOPLIST_FILE = "FeedroidTests/FeedroidTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E657F9211527154E00C1AB9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Feedroid.app/Feedroid";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Feedroid/Feedroid-Prefix.pch";
+				INFOPLIST_FILE = "FeedroidTests/FeedroidTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E657F8DA1527154E00C1AB9B /* Build configuration list for PBXProject "Feedroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E657F91A1527154E00C1AB9B /* Debug */,
+				E657F91B1527154E00C1AB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E657F91C1527154E00C1AB9B /* Build configuration list for PBXNativeTarget "Feedroid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E657F91D1527154E00C1AB9B /* Debug */,
+				E657F91E1527154E00C1AB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E657F91F1527154E00C1AB9B /* Build configuration list for PBXNativeTarget "FeedroidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E657F9201527154E00C1AB9B /* Debug */,
+				E657F9211527154E00C1AB9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E657F8FB1527154E00C1AB9B /* Feedroid.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E657F8FC1527154E00C1AB9B /* Feedroid.xcdatamodel */,
+			);
+			currentVersion = E657F8FC1527154E00C1AB9B /* Feedroid.xcdatamodel */;
+			path = Feedroid.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E657F8D71527154E00C1AB9B /* Project object */;
+}
