@@ -24,6 +24,14 @@
 		E657F90E1527154E00C1AB9B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E657F8EA1527154E00C1AB9B /* CoreData.framework */; };
 		E657F9161527154E00C1AB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E657F9141527154E00C1AB9B /* InfoPlist.strings */; };
 		E657F9191527154E00C1AB9B /* FeedroidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9181527154E00C1AB9B /* FeedroidTests.m */; };
+		E657F94F1527159A00C1AB9B /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9261527159A00C1AB9B /* GTMNSString+HTML.m */; };
+		E657F9501527159A00C1AB9B /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9281527159A00C1AB9B /* MWFeedInfo.m */; };
+		E657F9511527159A00C1AB9B /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F92A1527159A00C1AB9B /* MWFeedItem.m */; };
+		E657F9521527159A00C1AB9B /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F92C1527159A00C1AB9B /* MWFeedParser.m */; };
+		E657F9531527159A00C1AB9B /* MWFeedParserAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F92F1527159A00C1AB9B /* MWFeedParserAppDelegate.m */; };
+		E657F9541527159A00C1AB9B /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9311527159A00C1AB9B /* NSDate+InternetDateTime.m */; };
+		E657F9551527159A00C1AB9B /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9331527159A00C1AB9B /* NSString+HTML.m */; };
+		E657F9561527159A00C1AB9B /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = E657F9351527159A00C1AB9B /* NSString+XMLEntities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,24 +50,41 @@
 		E657F8E61527154E00C1AB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E657F8E81527154E00C1AB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E657F8EA1527154E00C1AB9B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E657F8EE1527154E00C1AB9B /* Feedroid-Info.plist */ = {isa = PBXFileReference; path = "Feedroid-Info.plist"; sourceTree = "<group>"; };
+		E657F8EE1527154E00C1AB9B /* Feedroid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Feedroid-Info.plist"; sourceTree = "<group>"; };
 		E657F8F01527154E00C1AB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E657F8F21527154E00C1AB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E657F8F41527154E00C1AB9B /* Feedroid-Prefix.pch */ = {isa = PBXFileReference; path = "Feedroid-Prefix.pch"; sourceTree = "<group>"; };
-		E657F8F51527154E00C1AB9B /* FeedroidAppDelegate.h */ = {isa = PBXFileReference; path = FeedroidAppDelegate.h; sourceTree = "<group>"; };
+		E657F8F41527154E00C1AB9B /* Feedroid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Feedroid-Prefix.pch"; sourceTree = "<group>"; };
+		E657F8F51527154E00C1AB9B /* FeedroidAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedroidAppDelegate.h; sourceTree = "<group>"; };
 		E657F8F61527154E00C1AB9B /* FeedroidAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidAppDelegate.m; sourceTree = "<group>"; };
 		E657F8F91527154E00C1AB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E657F8FC1527154E00C1AB9B /* Feedroid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Feedroid.xcdatamodel; sourceTree = "<group>"; };
-		E657F8FE1527154E00C1AB9B /* FeedroidMasterViewController.h */ = {isa = PBXFileReference; path = FeedroidMasterViewController.h; sourceTree = "<group>"; };
+		E657F8FE1527154E00C1AB9B /* FeedroidMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedroidMasterViewController.h; sourceTree = "<group>"; };
 		E657F8FF1527154E00C1AB9B /* FeedroidMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidMasterViewController.m; sourceTree = "<group>"; };
-		E657F9011527154E00C1AB9B /* FeedroidDetailViewController.h */ = {isa = PBXFileReference; path = FeedroidDetailViewController.h; sourceTree = "<group>"; };
+		E657F9011527154E00C1AB9B /* FeedroidDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedroidDetailViewController.h; sourceTree = "<group>"; };
 		E657F9021527154E00C1AB9B /* FeedroidDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidDetailViewController.m; sourceTree = "<group>"; };
 		E657F9091527154E00C1AB9B /* FeedroidTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedroidTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E657F90A1527154E00C1AB9B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E657F9131527154E00C1AB9B /* FeedroidTests-Info.plist */ = {isa = PBXFileReference; path = "FeedroidTests-Info.plist"; sourceTree = "<group>"; };
+		E657F9131527154E00C1AB9B /* FeedroidTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FeedroidTests-Info.plist"; sourceTree = "<group>"; };
 		E657F9151527154E00C1AB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E657F9171527154E00C1AB9B /* FeedroidTests.h */ = {isa = PBXFileReference; path = FeedroidTests.h; sourceTree = "<group>"; };
+		E657F9171527154E00C1AB9B /* FeedroidTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedroidTests.h; sourceTree = "<group>"; };
 		E657F9181527154E00C1AB9B /* FeedroidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedroidTests.m; sourceTree = "<group>"; };
+		E657F9251527159A00C1AB9B /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		E657F9261527159A00C1AB9B /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		E657F9271527159A00C1AB9B /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		E657F9281527159A00C1AB9B /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		E657F9291527159A00C1AB9B /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		E657F92A1527159A00C1AB9B /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		E657F92B1527159A00C1AB9B /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		E657F92C1527159A00C1AB9B /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		E657F92D1527159A00C1AB9B /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		E657F92E1527159A00C1AB9B /* MWFeedParserAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParserAppDelegate.h; sourceTree = "<group>"; };
+		E657F92F1527159A00C1AB9B /* MWFeedParserAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParserAppDelegate.m; sourceTree = "<group>"; };
+		E657F9301527159A00C1AB9B /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		E657F9311527159A00C1AB9B /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		E657F9321527159A00C1AB9B /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		E657F9331527159A00C1AB9B /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		E657F9341527159A00C1AB9B /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		E657F9351527159A00C1AB9B /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +147,9 @@
 		E657F8EC1527154E00C1AB9B /* Feedroid */ = {
 			isa = PBXGroup;
 			children = (
-				E657F8F51527154E00C1AB9B /* FeedroidAppDelegate.h */,
+				E657F9221527159A00C1AB9B /* Classes */,
 				E657F8F61527154E00C1AB9B /* FeedroidAppDelegate.m */,
+				E657F8F51527154E00C1AB9B /* FeedroidAppDelegate.h */,
 				E657F8F81527154E00C1AB9B /* MainStoryboard.storyboard */,
 				E657F8FE1527154E00C1AB9B /* FeedroidMasterViewController.h */,
 				E657F8FF1527154E00C1AB9B /* FeedroidMasterViewController.m */,
@@ -163,6 +189,30 @@
 				E657F9141527154E00C1AB9B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E657F9221527159A00C1AB9B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E657F9251527159A00C1AB9B /* GTMNSString+HTML.h */,
+				E657F9261527159A00C1AB9B /* GTMNSString+HTML.m */,
+				E657F9271527159A00C1AB9B /* MWFeedInfo.h */,
+				E657F9281527159A00C1AB9B /* MWFeedInfo.m */,
+				E657F9291527159A00C1AB9B /* MWFeedItem.h */,
+				E657F92A1527159A00C1AB9B /* MWFeedItem.m */,
+				E657F92B1527159A00C1AB9B /* MWFeedParser.h */,
+				E657F92C1527159A00C1AB9B /* MWFeedParser.m */,
+				E657F92D1527159A00C1AB9B /* MWFeedParser_Private.h */,
+				E657F92E1527159A00C1AB9B /* MWFeedParserAppDelegate.h */,
+				E657F92F1527159A00C1AB9B /* MWFeedParserAppDelegate.m */,
+				E657F9301527159A00C1AB9B /* NSDate+InternetDateTime.h */,
+				E657F9311527159A00C1AB9B /* NSDate+InternetDateTime.m */,
+				E657F9321527159A00C1AB9B /* NSString+HTML.h */,
+				E657F9331527159A00C1AB9B /* NSString+HTML.m */,
+				E657F9341527159A00C1AB9B /* NSString+XMLEntities.h */,
+				E657F9351527159A00C1AB9B /* NSString+XMLEntities.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +327,14 @@
 				E657F8FD1527154E00C1AB9B /* Feedroid.xcdatamodeld in Sources */,
 				E657F9001527154E00C1AB9B /* FeedroidMasterViewController.m in Sources */,
 				E657F9031527154E00C1AB9B /* FeedroidDetailViewController.m in Sources */,
+				E657F94F1527159A00C1AB9B /* GTMNSString+HTML.m in Sources */,
+				E657F9501527159A00C1AB9B /* MWFeedInfo.m in Sources */,
+				E657F9511527159A00C1AB9B /* MWFeedItem.m in Sources */,
+				E657F9521527159A00C1AB9B /* MWFeedParser.m in Sources */,
+				E657F9531527159A00C1AB9B /* MWFeedParserAppDelegate.m in Sources */,
+				E657F9541527159A00C1AB9B /* NSDate+InternetDateTime.m in Sources */,
+				E657F9551527159A00C1AB9B /* NSString+HTML.m in Sources */,
+				E657F9561527159A00C1AB9B /* NSString+XMLEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +504,7 @@
 				E657F91E1527154E00C1AB9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E657F91F1527154E00C1AB9B /* Build configuration list for PBXNativeTarget "FeedroidTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +513,7 @@
 				E657F9211527154E00C1AB9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
