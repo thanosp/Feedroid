@@ -44,12 +44,38 @@
     }        
 }
 
+- (NSString *)getImageURL:(NSString *)htmlCode
+{
+    NSRange start = [htmlCode rangeOfString:@"src=\""];
+    
+    //check range exists
+    if (start.location != NSNotFound) {
+        NSString *strippedCode = [htmlCode substringFromIndex:start.location + start.length];
+        NSRange end = [strippedCode rangeOfString:@"\""];
+        if (end.location != NSNotFound) {
+            return [strippedCode substringToIndex:end.location];
+        }
+    }
+
+    return NULL;
+}
+
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
+    
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        NSString *title = [self.detailItem valueForKey:@"title"];
+        NSString *bodyText = [[self.detailItem valueForKey:@"body"] description];
+        NSString *imageUrl = [self getImageURL: bodyText];
+        
+        self.detailDescriptionLabel.text = title;
+        
+        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
+        UIImage * feedImage = [UIImage imageWithData: imageData];
+        
+        [imageData release];
+
     }
 }
 

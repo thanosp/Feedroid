@@ -44,6 +44,15 @@
     UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (FeedroidDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    NSURL *feedURL = [NSURL URLWithString:@"http://www.nedroid.com/feed/rss"];
+    
+    MWFeedParser *feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
+    feedParser.delegate = self;
+    feedParser.feedParseType = ParseTypeFull;
+    feedParser.connectionType = ConnectionTypeSynchronously;
+    [feedParser parse];
+
 }
 
 - (void)viewDidUnload
@@ -76,6 +85,7 @@
         abort();
     }
 }
+
 
 #pragma mark - Table View
 
@@ -141,14 +151,14 @@
     
     NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CachedFeed" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO] autorelease];
+    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO] autorelease];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -230,10 +240,59 @@
 }
  */
 
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"title"] description];
+}
+
+#pragma mark -
+#pragma mark MWFeedParserDelegate
+
+- (void)feedParserDidStart:(MWFeedParser *)parser {
+	NSLog(@"Started Parsing: %@", parser.url);
+}
+
+- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
+	NSLog(@"Parsed Feed Info: “%@”", info.title);
+	self.title = info.title;
+}
+
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
+	NSLog(@"Parsed Feed Item: “%@”", item.title);
+	NSLog(@"Parsed Feed Item Summary: “%@”", item.summary);
+	NSLog(@"Parsed Feed Item id: “%@”", item.identifier);
+    [self insertNewFeedItem:item];
+}
+
+- (void)feedParserDidFinish:(MWFeedParser *)parser {
+	NSLog(@"Finished Parsing%@", (parser.stopped ? @" (Stopped)" : @""));}
+
+- (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
+}
+
+- (void) insertNewFeedItem:(MWFeedItem *)item
+{
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    
+    // If appropriate, configure the new managed object.
+    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+    [newManagedObject setValue:item.title forKey:@"title"];
+    [newManagedObject setValue:item.summary forKey:@"body"];
+    [newManagedObject setValue:item.identifier forKey:@"identifier"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWFeedParser.h"
 
 @class FeedroidDetailViewController;
 
@@ -18,5 +19,6 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

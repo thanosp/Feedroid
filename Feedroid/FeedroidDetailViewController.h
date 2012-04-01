@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWFeedParser.h"
+#import "NSString+HTML.h"
 
 @interface FeedroidDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
