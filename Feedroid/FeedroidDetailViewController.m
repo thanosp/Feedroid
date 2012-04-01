@@ -16,13 +16,13 @@
 @implementation FeedroidDetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize feedTitle = _feedTitle;
+@synthesize feedImage = _feedImage;
 @synthesize masterPopoverController = _masterPopoverController;
 
 - (void)dealloc
 {
     [_detailItem release];
-    [_detailDescriptionLabel release];
     [_masterPopoverController release];
     [super dealloc];
 }
@@ -46,6 +46,8 @@
 
 - (NSString *)getImageURL:(NSString *)htmlCode
 {
+    NSString *imageURL = NULL;
+    
     NSRange start = [htmlCode rangeOfString:@"src=\""];
     
     //check range exists
@@ -53,11 +55,11 @@
         NSString *strippedCode = [htmlCode substringFromIndex:start.location + start.length];
         NSRange end = [strippedCode rangeOfString:@"\""];
         if (end.location != NSNotFound) {
-            return [strippedCode substringToIndex:end.location];
+            imageURL = [strippedCode substringToIndex:end.location];
         }
     }
 
-    return NULL;
+    return imageURL;
 }
 
 - (void)configureView
@@ -69,12 +71,10 @@
         NSString *bodyText = [[self.detailItem valueForKey:@"body"] description];
         NSString *imageUrl = [self getImageURL: bodyText];
         
-        self.detailDescriptionLabel.text = title;
+        self.feedTitle.title = title;
         
         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
-        UIImage * feedImage = [UIImage imageWithData: imageData];
-        
-        [imageData release];
+        self.feedImage.image = [UIImage imageWithData: imageData];
 
     }
 }
@@ -90,7 +90,7 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    self.detailDescriptionLabel = nil;
+    self.feedTitle.title = @"Choose a comic";
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -102,7 +102,7 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
+    barButtonItem.title = NSLocalizedString(@"Chooose", @"Choose");
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
     self.masterPopoverController = popoverController;
 }
